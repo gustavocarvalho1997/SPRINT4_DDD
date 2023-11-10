@@ -35,6 +35,18 @@ public abstract class Veiculo {
 		this.cor = cor;
 	}
 	
+	public Veiculo(int id, String renavam, String modelo, String chassi, LocalDate dataVeiculo, double altura,
+			double comprimento, double largura) {
+		super();
+		this.id = id;
+		this.renavam = renavam;
+		this.modelo = modelo;
+		this.chassi = chassi;
+		this.dataVeiculo = dataVeiculo;
+		this.altura = altura;
+		this.comprimento = comprimento;
+		this.largura = largura;
+	}
 	// Getters
 	public int getId() {
 		return id;

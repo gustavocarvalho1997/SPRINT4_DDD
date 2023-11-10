@@ -35,6 +35,17 @@ public final class Cliente {
 		super();
 	}
 	
+	public Cliente(int id, PlanoDeSeguro planoDeSeguro, String cpf, String nome, String email, String senha,
+			Endereco endereco) {
+		super();
+		this.id = id;
+		this.planoDeSeguro = planoDeSeguro;
+		this.cpf = cpf;
+		this.nome = nome;
+		this.email = email;
+		this.senha = senha;
+		this.endereco = endereco;
+	}
 	// Getters
 	public int getId() {
 		return id;

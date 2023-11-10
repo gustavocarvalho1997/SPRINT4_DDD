@@ -20,6 +20,13 @@ public final class Caminhao extends Veiculo{
 		super();
 	}
 	
+	public Caminhao(int id, String renavam, String modelo, String chassi, LocalDate dataVeiculo, double altura,
+			double comprimento, double largura, int idCaminhao, int qtdEixos, double peso) {
+		super(id, renavam, modelo, chassi, dataVeiculo, altura, comprimento, largura);
+		this.idCaminhao = idCaminhao;
+		this.qtdEixos = qtdEixos;
+		this.peso = peso;
+	}
 	// Getters
 	public int getIdCaminhao() {
 		return idCaminhao;

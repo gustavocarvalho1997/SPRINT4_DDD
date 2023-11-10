@@ -23,6 +23,15 @@ public final class Guincho extends Veiculo{
 		this.descricao = descricao;
 	}
 	
+	public Guincho(int id, String renavam, String modelo, String chassi, LocalDate dataVeiculo, double altura,
+			double comprimento, double largura, int idGuincho, double maxToneladas, double maxComprimento,
+			String descricao) {
+		super(id, renavam, modelo, chassi, dataVeiculo, altura, comprimento, largura);
+		this.idGuincho = idGuincho;
+		this.maxToneladas = maxToneladas;
+		this.maxComprimento = maxComprimento;
+		this.descricao = descricao;
+	}
 	// Getters
 	public int getIdGuincho() {
 		return idGuincho;
