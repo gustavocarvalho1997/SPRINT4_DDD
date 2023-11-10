@@ -12,18 +12,15 @@ public final class Bairro {
 	private String zona;
 	@JsonFormat(pattern = "dd-MM-yyyy", shape = JsonFormat.Shape.STRING)
 	private LocalDate dataCadastro;
-	//TODO VERIFICAR
-	private String nomeUsuario;
 	
 	// Construtores
-	public Bairro(int id, Cidade cidade, String nome, String zona, LocalDate dataCadastro, String nomeUsuario) {
+	public Bairro(int id, Cidade cidade, String nome, String zona, LocalDate dataCadastro) {
 		super();
 		this.id = id;
 		this.cidade = cidade;
 		this.nome = nome;
 		this.zona = zona;
 		this.dataCadastro = dataCadastro;
-		this.nomeUsuario = nomeUsuario;
 	}
 	public Bairro() {
 		super();
@@ -45,10 +42,6 @@ public final class Bairro {
 	public LocalDate getDataCadastro() {
 		return dataCadastro;
 	}
-	// TODO VERIFICAR
-	public String getNomeUsuario() {
-		return nomeUsuario;
-	}
 	// Setters
 	public void setId(int id) {
 		this.id = id;
@@ -64,9 +57,5 @@ public final class Bairro {
 	}
 	public void setDataCadastro(LocalDate dataCadastro) {
 		this.dataCadastro = dataCadastro;
-	}
-	// TODO VERIFICAR
-	public void setNomeUsuario(String nomeUsuario) {
-		this.nomeUsuario = nomeUsuario;
 	}
 }//CLASS
