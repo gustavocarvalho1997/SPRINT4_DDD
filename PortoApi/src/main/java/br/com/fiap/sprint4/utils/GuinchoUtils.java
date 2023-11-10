@@ -8,7 +8,7 @@ import br.com.fiap.sprint4.models.Guincho;
 
 public final class GuinchoUtils {
 	// INICIO PARSE
-	private Guincho parse(ResultSet rs) throws SQLException {
+	public static Guincho parse(ResultSet rs) throws SQLException {
 		int idVeiculo = rs.getInt("ID_VEICULO");
 		String renavam =  rs.getString("CD_RENAVAM");
 		String modelo = rs.getString("NM_MODELO");
