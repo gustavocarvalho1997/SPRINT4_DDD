@@ -15,10 +15,11 @@ public final class Cliente {
 	private LocalDate dataNascimento;
 	private char sexo;
 	private String senha;
+	private Endereco endereco;
 	
 	// Construtores
 	public Cliente(int id, PlanoDeSeguro planoDeSeguro, String cpf, String nome, String email, LocalDate dataNascimento,
-			char sexo, String senha) {
+			char sexo, String senha, Endereco endereco) {
 		super();
 		this.id = id;
 		this.planoDeSeguro = planoDeSeguro;
@@ -28,6 +29,7 @@ public final class Cliente {
 		this.dataNascimento = dataNascimento;
 		this.sexo = sexo;
 		this.senha = senha;
+		this.endereco = endereco;
 	}
 	public Cliente() {
 		super();
@@ -58,6 +60,9 @@ public final class Cliente {
 	public String getSenha() {
 		return senha;
 	}
+	public Endereco getEndereco() {
+		return endereco;
+	}
 	// Setters
 	public void setId(int id) {
 		this.id = id;
@@ -82,6 +87,9 @@ public final class Cliente {
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 	
 	
