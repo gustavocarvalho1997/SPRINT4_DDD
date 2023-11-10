@@ -12,18 +12,15 @@ public final class Logradouro {
 	private long cep;
 	@JsonFormat(pattern = "dd-MM-yyyy", shape = JsonFormat.Shape.STRING)
 	private LocalDate dataCadastro;
-	// TODO VERIFICAR
-	private String nomeUsuario;
 	
 	// Construtores
-	public Logradouro(int id, Bairro bairro, String nome, long cep, LocalDate dataCadastro, String nomeUsuario) {
+	public Logradouro(int id, Bairro bairro, String nome, long cep, LocalDate dataCadastro) {
 		super();
 		this.id = id;
 		this.bairro = bairro;
 		this.nome = nome;
 		this.cep = cep;
 		this.dataCadastro = dataCadastro;
-		this.nomeUsuario = nomeUsuario;
 	}
 	public Logradouro() {
 		super();
@@ -45,10 +42,6 @@ public final class Logradouro {
 	public LocalDate getDataCadastro() {
 		return dataCadastro;
 	}
-	// TODO VERIFICAR
-	public String getNomeUsuario() {
-		return nomeUsuario;
-	}
 	
 	// Setters
 	public void setId(int id) {
@@ -65,9 +58,5 @@ public final class Logradouro {
 	}
 	public void setDataCadastro(LocalDate dataCadastro) {
 		this.dataCadastro = dataCadastro;
-	}
-	// TODO VERIFICAR
-	public void setNomeUsuario(String nomeUsuario) {
-		this.nomeUsuario = nomeUsuario;
 	}
 }//CLASS
