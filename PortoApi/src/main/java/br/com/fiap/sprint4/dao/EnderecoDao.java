@@ -1,6 +1,13 @@
 package br.com.fiap.sprint4.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import br.com.fiap.sprint4.exception.IdNotFoundException;
+import br.com.fiap.sprint4.models.Endereco;
+import br.com.fiap.sprint4.utils.EnderecoUtils;
 
 public final class EnderecoDao {
 	// Atributos
@@ -11,4 +18,16 @@ public final class EnderecoDao {
 	public EnderecoDao(Connection conn) {
 		this.conn = conn;
 	}
+	
+	// PesquisarPorId INICIO
+	public Endereco pesquisarPorId(int id) throws SQLException, IdNotFoundException {
+		PreparedStatement stm = conn.prepareStatement(PESQ_ID);
+		stm.setInt(1, id);
+		ResultSet rs = stm.executeQuery();
+		if(!rs.next()) {
+			throw new IdNotFoundException("Id informado não foi localizado!");
+		}
+		Endereco endereco =  EnderecoUtils.parse(rs);
+		return endereco;
+	}// PesquisarPorId FIM
 }//CLASS
