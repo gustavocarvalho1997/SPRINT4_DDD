@@ -1,6 +1,16 @@
 package br.com.fiap.sprint4.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.fiap.sprint4.models.Caminhao;
+import br.com.fiap.sprint4.models.Cliente;
+import br.com.fiap.sprint4.models.Veiculo;
+import br.com.fiap.sprint4.utils.CaminhaoUtils;
 
 public final class CaminhaoDao {
 	// Atributos
@@ -12,5 +22,17 @@ public final class CaminhaoDao {
 		this.conn = conn;
 	}
 	
+	// Listar INICIO
+	public List<Veiculo> listar(Cliente cliente) throws SQLException {
+		PreparedStatement stm = conn.prepareStatement(LISTAR);
+		stm.setInt(1, cliente.getId());
+		ResultSet rs = stm.executeQuery();
+		List<Veiculo> lista = new ArrayList<>();
+		while(rs.next()) {
+			Caminhao caminhao = CaminhaoUtils.parse(rs);
+			lista.add(caminhao);
+		}
+		return lista;
+	}// Listar FIM
 	
 }//CLASS
