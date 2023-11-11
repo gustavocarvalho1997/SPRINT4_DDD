@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
+import br.com.fiap.sprint4.models.Cliente;
 import br.com.fiap.sprint4.models.PlanoDeSeguro;
 
 public final class PlanoDeSeguroUtils {
@@ -18,4 +19,9 @@ public final class PlanoDeSeguroUtils {
 		PlanoDeSeguro p = new PlanoDeSeguro(id, tipo, cobertura, dataContrato, vinculo);
 		return p;
 	}// PARSE FIM
+	
+	// areCredentialsValid INICIO
+	public static boolean areCredentialsValid(Cliente cliente, PlanoDeSeguro plano) {
+		return (cliente.getPlanoDeSeguro().getId() == plano.getId());
+	}// areCredentialsValid FIM
 }//CLASS
