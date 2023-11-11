@@ -6,6 +6,7 @@ import java.time.LocalDate;
 
 import br.com.fiap.sprint4.models.Bairro;
 import br.com.fiap.sprint4.models.Cidade;
+import br.com.fiap.sprint4.models.Cliente;
 import br.com.fiap.sprint4.models.Endereco;
 import br.com.fiap.sprint4.models.Estado;
 import br.com.fiap.sprint4.models.Logradouro;
@@ -48,4 +49,9 @@ public final class EnderecoUtils {
 		}
 		return endereco;
 	}//PARSE FIM
+	
+	// areCredentialsValid INICIO
+	public static boolean areCredentialsValid(Cliente cliente, Endereco endereco) {
+		return (cliente.getEndereco().getId() == endereco.getId());
+	}// areCredentialsValid FIM
 }//CLASS
