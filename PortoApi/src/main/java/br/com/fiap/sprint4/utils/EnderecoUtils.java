@@ -18,22 +18,22 @@ public final class EnderecoUtils {
 		int numeroLogradouro = rs.getInt("NR_LOGRADOURO");
 		String complemento = rs.getString("DS_NUM_COMPLEMENTO");
 		String referencia = rs.getString("DS_PONTO_REFERENCIA");
-		LocalDate dataCadastroEndereco = rs.getObject("DT_CADASTRO", LocalDate.class);
+		LocalDate dataCadastroEndereco = rs.getObject("DT_ENDERECO", LocalDate.class);
 		int idBairro = rs.getInt("ID_BAIRRO");
 		String nomeLogradouro = rs.getString("NM_LOGRADOURO");
 		long cep = rs.getInt("NR_CEP");
-		LocalDate dataCadastroLogradouro = rs.getObject("DT_CADASTRO_1", LocalDate.class);
+		LocalDate dataCadastroLogradouro = rs.getObject("DT_LOGRADOURO", LocalDate.class);
 		int idCidade = rs.getInt("ID_CIDADE");
 		String nomeBairro = rs.getString("NM_BAIRRO");
 		String zona = rs.getString("NM_ZONA");
-		LocalDate dataCadastroBairro = rs.getObject("DT_CADASTRO_2", LocalDate.class);
+		LocalDate dataCadastroBairro = rs.getObject("DT_BAIRRO", LocalDate.class);
 		int idEstado = rs.getInt("ID_ESTADO");
 		String nomeCidade = rs.getString("NM_CIDADE");
 		int ddd = rs.getInt("NR_DDD");
-		LocalDate dataCadastroCidade = rs.getObject("DT_CADASTRO_3", LocalDate.class);
+		LocalDate dataCadastroCidade = rs.getObject("DT_CIDADE", LocalDate.class);
 		String siglaEstado = rs.getString("SG_ESTADO");
 		String nomeEstado = rs.getString("NM_ESTADO");
-		LocalDate dataCadastroEstado = rs.getObject("DT_CADASTRO_4", LocalDate.class);
+		LocalDate dataCadastroEstado = rs.getObject("DT_ESTADO", LocalDate.class);
 		
 		Estado estado = new Estado(idEstado, siglaEstado, nomeEstado, dataCadastroEstado);
 		Cidade cidade = new Cidade(idCidade, estado, nomeCidade, ddd, dataCadastroCidade);

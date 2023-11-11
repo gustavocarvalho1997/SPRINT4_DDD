@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import br.com.fiap.sprint4.dao.EnderecoDao;
+import br.com.fiap.sprint4.exception.IdNotFoundException;
 import br.com.fiap.sprint4.factory.ConnectionFactory;
 import br.com.fiap.sprint4.models.Endereco;
 
@@ -18,7 +19,7 @@ public final class EnderecoService {
 	}
 	
 	// PesquisarPorId INICIO
-	public Endereco pesquisarPorId(int id) throws SQLException {
+	public Endereco pesquisarPorId(int id) throws SQLException, IdNotFoundException {
 		return enderecoDao.pesquisarPorId(id);
 	}
 }//CLASS
