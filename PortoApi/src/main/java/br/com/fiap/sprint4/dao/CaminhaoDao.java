@@ -34,5 +34,4 @@ public final class CaminhaoDao {
 		}
 		return lista;
 	}// Listar FIM
-	
 }//CLASS
