@@ -26,6 +26,10 @@ public final class PlanoDeSeguro {
 	public PlanoDeSeguro() {
 		super();
 	}
+	public PlanoDeSeguro(int id) {
+		super();
+		this.id = id;
+	}
 	
 	// Getters
 	public int getId() {

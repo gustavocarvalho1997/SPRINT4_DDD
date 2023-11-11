@@ -28,7 +28,6 @@ public final class Endereco {
 	public Endereco() {
 		super();
 	}
-	
 	public Endereco(int id, int numero, LocalDate dataCadastro, Logradouro logradouro) {
 		super();
 		this.id = id;
@@ -36,6 +35,11 @@ public final class Endereco {
 		this.dataCadastro = dataCadastro;
 		this.logradouro = logradouro;
 	}
+	public Endereco(int id) {
+		super();
+		this.id = id;
+	}
+	
 	// Getters
 	public int getId() {
 		return id;
