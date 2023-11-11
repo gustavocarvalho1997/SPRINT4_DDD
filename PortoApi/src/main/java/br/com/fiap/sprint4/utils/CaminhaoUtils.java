@@ -7,6 +7,9 @@ import java.time.LocalDate;
 import br.com.fiap.sprint4.models.Caminhao;
 
 public final class CaminhaoUtils {
+	private CaminhaoUtils() {
+	}
+	
 	public static Caminhao parse(ResultSet rs) throws SQLException {
 		int idVeiculo = rs.getInt("ID_VEICULO");
 		String renavam =  rs.getString("CD_RENAVAM");

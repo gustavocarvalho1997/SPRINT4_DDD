@@ -7,6 +7,8 @@ import java.time.LocalDate;
 import br.com.fiap.sprint4.models.Guincho;
 
 public final class GuinchoUtils {
+	private GuinchoUtils() {
+	}
 	// INICIO PARSE
 	public static Guincho parse(ResultSet rs) throws SQLException {
 		int idVeiculo = rs.getInt("ID_VEICULO");

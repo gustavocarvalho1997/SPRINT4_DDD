@@ -8,6 +8,8 @@ import br.com.fiap.sprint4.models.Cliente;
 import br.com.fiap.sprint4.models.PlanoDeSeguro;
 
 public final class PlanoDeSeguroUtils {
+	private PlanoDeSeguroUtils() {
+	}
 	//PARSE INICIO
 	public static PlanoDeSeguro parse(ResultSet rs) throws SQLException{
 		int id = rs.getInt("ID_PLANO_DE_SEGURO");

@@ -9,6 +9,9 @@ import br.com.fiap.sprint4.models.Endereco;
 import br.com.fiap.sprint4.models.PlanoDeSeguro;
 
 public final class ClienteUtils {
+	private ClienteUtils() {
+	}
+	
 	// INICIO PARSE
 	public static Cliente parse(ResultSet rs) throws SQLException{
 		int id = rs.getInt("ID_CLIENTE");

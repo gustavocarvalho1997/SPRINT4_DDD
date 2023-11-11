@@ -12,6 +12,8 @@ import br.com.fiap.sprint4.models.Estado;
 import br.com.fiap.sprint4.models.Logradouro;
 
 public final class EnderecoUtils {
+	private EnderecoUtils() {
+	}
 	// PARSE INICIO
 	public static Endereco parse(ResultSet rs) throws SQLException {
 		int idEndereco = rs.getInt("ID_ENDERECO");
